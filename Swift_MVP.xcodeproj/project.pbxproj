@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B53B08461EADC10900C888B2 /* ENMBadgedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B08451EADC10900C888B2 /* ENMBadgedBarButtonItem.swift */; };
 		B5DA570A1EAC9E4D00298DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA57091EAC9E4D00298DE7 /* AppDelegate.swift */; };
-		B5DA570C1EAC9E4D00298DE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA570B1EAC9E4D00298DE7 /* ViewController.swift */; };
+		B5DA570C1EAC9E4D00298DE7 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA570B1EAC9E4D00298DE7 /* CartViewController.swift */; };
 		B5DA570F1EAC9E4D00298DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DA570D1EAC9E4D00298DE7 /* Main.storyboard */; };
 		B5DA57111EAC9E4D00298DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5DA57101EAC9E4D00298DE7 /* Assets.xcassets */; };
 		B5DA57141EAC9E4D00298DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5DA57121EAC9E4D00298DE7 /* LaunchScreen.storyboard */; };
@@ -44,7 +44,7 @@
 		B53B08451EADC10900C888B2 /* ENMBadgedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENMBadgedBarButtonItem.swift; sourceTree = "<group>"; };
 		B5DA57061EAC9E4D00298DE7 /* Swift_MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5DA57091EAC9E4D00298DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5DA570B1EAC9E4D00298DE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5DA570B1EAC9E4D00298DE7 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		B5DA570E1EAC9E4D00298DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5DA57101EAC9E4D00298DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5DA57131EAC9E4D00298DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,8 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B5DA570D1EAC9E4D00298DE7 /* Main.storyboard */,
-				B53B08451EADC10900C888B2 /* ENMBadgedBarButtonItem.swift */,
-				B5DA570B1EAC9E4D00298DE7 /* ViewController.swift */,
+				B5DA570B1EAC9E4D00298DE7 /* CartViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C2EB24DE20ABD159002F79D2 /* Utility.swift */,
+				B53B08451EADC10900C888B2 /* ENMBadgedBarButtonItem.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 				B53B08461EADC10900C888B2 /* ENMBadgedBarButtonItem.swift in Sources */,
 				C2EB24DF20ABD159002F79D2 /* Utility.swift in Sources */,
 				B5DA57411EACA26600298DE7 /* CartView.swift in Sources */,
-				B5DA570C1EAC9E4D00298DE7 /* ViewController.swift in Sources */,
+				B5DA570C1EAC9E4D00298DE7 /* CartViewController.swift in Sources */,
 				B5DA573B1EAC9FA800298DE7 /* Cart.swift in Sources */,
 				B5DA570A1EAC9E4D00298DE7 /* AppDelegate.swift in Sources */,
 				B5DA573F1EACA22800298DE7 /* CartViewData.swift in Sources */,
