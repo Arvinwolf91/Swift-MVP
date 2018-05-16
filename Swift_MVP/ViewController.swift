@@ -15,8 +15,6 @@ class CartViewController: UIViewController {
 	@IBOutlet weak var emptyView: UIView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
-	
-
 	// VARIABLES
 	private let cartPresenter = CartPresenter(cartService: CartService())
 	var cartToDisplay         = [CartViewData]()
@@ -39,15 +37,13 @@ class CartViewController: UIViewController {
 		self.refreshControll.addTarget(self, action: #selector(self.initPullRefresh(_:)), for: .valueChanged)
 		
 		self.setUpLeftBarButton()
-		
-
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(true)
 	}
 	
-	func initPullRefresh(_ refresh: UIRefreshControl) {
+	@objc func initPullRefresh(_ refresh: UIRefreshControl) {
 		
 		let delayTime = DispatchTime.now() + 2
 		DispatchQueue.main.asyncAfter(deadline: delayTime) {
@@ -59,11 +55,7 @@ class CartViewController: UIViewController {
 			
 			self.tableView.reloadData()
 			refresh.endRefreshing()
-			
 		}
-
-		
-		
 	}
 	
 	func setUpLeftBarButton() {
@@ -83,16 +75,6 @@ class CartViewController: UIViewController {
 		navigationItem.leftBarButtonItem = leftBarButton
 	}
 	
-	func formatCurrency(value: Double) -> String {
-		let formatter = NumberFormatter()
-		formatter.numberStyle = .currency
-		formatter.maximumFractionDigits = 2;
-		formatter.locale = Locale(identifier: "id_ID")
-		var result = formatter.string(from: value as NSNumber);
-		result = result?.replacingOccurrences(of: "Rp", with: "Rp. ")
-		return result!
-	}
-	
 	func deleteData(index: Int) {
 		
 		self.tableView.beginUpdates()
@@ -106,7 +88,6 @@ class CartViewController: UIViewController {
 		
 		self.tableView.endUpdates()
 	}
-	
 }
 
 extension CartViewController: CartView {
@@ -135,9 +116,7 @@ extension CartViewController: CartView {
 		self.tableView.isHidden = true
 		self.emptyView.isHidden = false
 	}
-	
 }
-
 
 extension CartViewController: UITableViewDataSource {
 	
@@ -151,10 +130,9 @@ extension CartViewController: UITableViewDataSource {
 		let cartViewData = cartToDisplay[indexPath.row]
 		
 		cell.textLabel?.text = cartViewData.namaBarang
-		cell.detailTextLabel?.text = self.formatCurrency(value: cartViewData.hargaBarang)
+		cell.detailTextLabel?.text = Utility.formatCurrency(value: cartViewData.hargaBarang)
 		
 		return cell
-		
 	}
 	
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -166,8 +144,5 @@ extension CartViewController: UITableViewDataSource {
 		if editingStyle == .delete {
 			self.deleteData(index: indexPath.row)
 		}
-		
 	}
-	
-	
 }

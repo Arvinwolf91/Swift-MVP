@@ -14,5 +14,4 @@ protocol CartView: NSObjectProtocol {
 	func finishLoading()
 	func setCarts(carts: [CartViewData])
 	func setEmptyCarts()
-	
 }

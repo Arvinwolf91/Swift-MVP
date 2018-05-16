@@ -24,7 +24,6 @@ class CartService {
    			callBack(carts)
 		}
 	}
-	
 }
 
 

@@ -16,5 +16,4 @@ struct Cart {
 	let hargaBarang: Double
 	let namaPemesan: String
 	let alamatPemesan: String
-	
 }
